@@ -8,28 +8,47 @@
  * 用到的知识点trim md5
  * 密码不是空的，密码长度是否大于6位，密码两次是否相同
  */
-session_start();
 include 'common.php';
-var_dump(WEB_SITE);
-var_dump($_POST);
 $username = trim($_POST['username']);
 $password = md5(trim($_POST['pwd']));
 $rpwd = md5(trim($_POST['repwd']));
-if (strlen($username) < 5) {
-	exit('用户长度不能为空或者小于3位');
+/**
+ * 先把规矩给改了，以后在完善
+ */
+// if (strlen($username) < 5) {
+// 	exit('用户长度不能为空或者小于3位');
 
-}
-if ($password != $rpwd) {
-	exit('两次密码长度不一致');
+// }
+// if ($password != $rpwd) {
+// 	exit('两次密码长度不一致');
 
-}
-connect('127.0.0.1', 'root', '');
-var_dump($conn);
+// }
+
 if (!$conn) {
 	echo '数据库连接失败';
 	echo '错误号' . mysqli_errno($conn) . '错误信息为' . mysqli_error($conn);
-	exit;
+	exit(‘数据库选择失败’);
 
 }
+/**
+ * 这里数据库连接成功。需要将受到的数据注册到数据库中
+ * 准备sql 语句
+ * 执行sql 语句
+ * 判断是否有结果，有结果就成功，无结果就失败
+ */
+$sql = "insert into bs_user(username,password)values('$username','$rpwd')";
+$result = mysqli_query($conn, $sql);
+if ($result && mysqli_affected_rows($conn)) {
+	echo '注册成功,当前的用户为' . mysqli_insert_id($conn);
+} else {
+
+	echo '注册失败';
+	echo mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+echo $sql;
+//var_dump($conn);
 
 ?>
