@@ -17,25 +17,20 @@ var_dump($database);
 $cd = mysqli_connect('127.0.0.1', 'root', '');
 //var_dump($cd);
 
-$dbs = connect(
+$conn = connect(
 	$database['DB_HOST'],
 	$database['DB_USER'],
 	$database['DB_PWD'],
 	$database['DB_NAME'],
 	$database['DB_CHARSET']
 );
-$db = connect('127.0.0.1', 'root', '', 'bs', 'utf8');
-var_dump($dbs);
-exit();
 
-// if ($conn) {
-// 	echo '存在';
-// 	return '返回成功';
-// } else {
+if ($conn) {
 
-// 	echo '数据库连接失败';
-// 	return '返回失败';
-// }
-//var_dump($conn);
+	return '$conn';
+} else {
+
+	return '返回失败';
+}
 
 ?>
