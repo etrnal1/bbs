@@ -13,19 +13,29 @@ include WEB_SITE . 'function/mysql_func.php';
 //echo WEB_SITE;
 //var_dump($database);
 //exit();
-$conn = connect(
+var_dump($database);
+$cd = mysqli_connect('127.0.0.1', 'root', '');
+//var_dump($cd);
+
+$dbs = connect(
 	$database['DB_HOST'],
 	$database['DB_USER'],
 	$database['DB_PWD'],
 	$database['DB_NAME'],
 	$database['DB_CHARSET']
 );
-var_dump($conn);
-if ($conn) {
+$db = connect('127.0.0.1', 'root', '', 'bs', 'utf8');
+var_dump($dbs);
+exit();
 
-	return '返回成功';
-} else {
-	return '返回失败';
-}
+// if ($conn) {
+// 	echo '存在';
+// 	return '返回成功';
+// } else {
+
+// 	echo '数据库连接失败';
+// 	return '返回失败';
+// }
+//var_dump($conn);
 
 ?>
