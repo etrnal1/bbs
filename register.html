@@ -15,14 +15,21 @@
 			text-align: center;
 			border: 1px;
 		}
+		.two{
+			 text-align: center;
+			 width: 200px;
+		}
 	</style>
 </head>
 <body>
 	<div class ="one">
 		 <form action="user_add.php" method="post">
-		 	用户名<input type="text" name="username"><br>
-		 	密码<input type="password" name="pwd"><br>
-		 	重复密码 <input type="password" name="repwd"><br>
+		 	<table>
+		 		<tr class="two">用户名      <input type="text" name="username"></tr><br>
+		 		<tr class="two">密码        <input type="password" name="pwd"></tr><br>
+		 		重复密码 <tr class="two"><input type="password" name="repwd"></tr>
+		 	</table>
+		 	
 		 	<input type="submit" value="注册"><br>
 
 
