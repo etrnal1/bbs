@@ -14,7 +14,7 @@
 function connect($host, $user, $pwd, $name, $charset) {
 	if (!$conn = mysqli_connect($host, $user, $pwd)) {
 
-		return '数据库连接失败';
+		return false;
 
 	}
 	if (!mysqli_select_db($conn, $name)) {
@@ -22,7 +22,5 @@ function connect($host, $user, $pwd, $name, $charset) {
 
 	}
 	mysqli_set_charset($conn, $charset);
-
-	return $conn;
 
 }
