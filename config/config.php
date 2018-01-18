@@ -1,15 +1,14 @@
 <?php
 /**
  * 定制一些数据库的参数
- * 返回一个数组
+ * 返回一个sh
  */
 return [
-	'DB_HOST' => 'localhost',
-
+	'DB_HOST' => '127.0.0.1',
 	'DB_USER' => 'root',
 	'DB_PWD' => '',
-	'DB_NAME' => 'root',
-	'DB_CHARSET' => 'UTF8',
+	'DB_NAME' => 'bs',
+	'DB_CHARSET' => 'utf8',
 	'DB_PREFIX' => 'bs_',
 
 ];
