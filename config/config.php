@@ -9,8 +9,6 @@ return [
 	'DB_PWD' => '',
 	'DB_NAME' => 'bs',
 	'DB_CHARSET' => 'utf8',
-	'DB_PREFIX' => 'bs_',
-
 ];
 
 ?>
