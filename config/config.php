@@ -1,21 +1,17 @@
 <?php
 /**
- * 定制一些数据库的基本文件
+ * 定制一些数据库的参数
+ * 返回一个数组
  */
 return [
-   'DB_HOST' => 'localhost',
+	'DB_HOST' => 'localhost',
 
-   'DB_USER' =>'root',
-   'DB_PWD' => '',
-   'DB_NAME'=>'root',
-   'DB_CHARSET' =>'UTF8',
-   'DB_PREFIX' =>'bs_',
- 
-]
-define(DB_HOST, '120.0.0.1');
-define(DB_NAME, 'bs');
-define(DB_USER, root);
-define(DB_PWD, '');
-define(DB_CHARSET, utf8);
+	'DB_USER' => 'root',
+	'DB_PWD' => '',
+	'DB_NAME' => 'root',
+	'DB_CHARSET' => 'UTF8',
+	'DB_PREFIX' => 'bs_',
+
+];
 
 ?>
