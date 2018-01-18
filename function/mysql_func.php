@@ -11,7 +11,7 @@
  * @param  [type] $charset  [数据库连接字符集description]
  * @return [type]           [返回类型描述description]
  */
-function connect($host, $user, $password, $charset) {
+function connect($host, $user, $pwd, $name, $charset) {
 	if (!$conn = mysqli_connect($host, $user, $pwd)) {
 
 		return false;
