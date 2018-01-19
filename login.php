@@ -15,8 +15,8 @@ include 'common.php';
 $username = trim($_POST['username']);
 $pwd = md5(trim($_POST['password']));
 //var_dump($_POST);
-
-$sql = "select username,password from bs_user where username ='$username'";
+//查询用户信息是否存在，将信息进行存储
+$sql = "select uid,username,password from bs_user where username ='$username'";
 //echo $sql;
 $result = mysqli_query($conn, $sql);
 
@@ -30,14 +30,11 @@ if (empty($db)) {
 
 }
 
-// if (empty($result)) {
-// 	$tips = '登录失败，用户名不存在';
-// 	include 'tpl/error.php';
-// 	exit;
-
-// }
-$data = mysqli_fetch_assoc($result);
-if ($pwd != $data['password']) {
+//出错 打段隔，进行代码的调试
+// var_dump($db);
+// var_dump($db['password']);
+// exit();
+if ($pwd != $db['password']) {
 	$tips = '密码不正确';
 	include 'tpl/error.php';
 
@@ -45,16 +42,22 @@ if ($pwd != $data['password']) {
 //var_dump($data);
 //var_dump($data['password']);
 //exit();
-if ($pwd == $data['password']) {
-	$_SESSION['uid'] = $data['uid'];
-	$_SESSION['username'] = $data['username'];
+//var_dump($pwd);
+//var_dump($db['password']);
+//var_dump($db);
+if ($pwd == $db['password']) {
+	$_SESSION['uid'] = $db['uid'];
+	$_SESSION['username'] = $db['username'];
+	var_dump($_SESSION);
 	// $_SESSION['user_type'] = $data['usertype'];
 	$tips = '登录成功';
 	include 'tpl/success.php';
+	header('location:index.php');
 
 } else {
 	$tips = '登录失败';
 	include 'tpl/error.php';
+	header('location:login.php');
 }
 
 //var_dump($result);
