@@ -16,7 +16,7 @@ $username = trim($_POST['username']);
 $pwd = md5(trim($_POST['password']));
 //var_dump($_POST);
 //查询用户信息是否存在，将信息进行存储
-$sql = "select uid,username,password from bs_user where username ='$username'";
+$sql = "select uid,username,password,type from bs_user where username ='$username'";
 //echo $sql;
 $result = mysqli_query($conn, $sql);
 
@@ -49,7 +49,7 @@ if ($pwd == $db['password']) {
 	$_SESSION['uid'] = $db['uid'];
 	$_SESSION['username'] = $db['username'];
 	var_dump($_SESSION);
-	// $_SESSION['user_type'] = $data['usertype'];
+	$_SESSION['usertype'] = $data['usertype'];
 	$tips = '登录成功';
 	include 'tpl/success.php';
 	//header('location:index.php');
