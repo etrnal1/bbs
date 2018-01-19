@@ -11,6 +11,7 @@
 include 'common.php';
 $username = trim($_POST['username']);
 $password = md5(trim($_POST['pwd']));
+$usertype = $_POST['user_type'];
 $rpwd = md5(trim($_POST['repwd']));
 $createtime = time();
 $ip = ip2long($_SERVER['REMOTE_ADDR']);
@@ -38,7 +39,7 @@ if (!$conn) {
  * 执行sql 语句
  * 判断是否有结果，有结果就成功，无结果就失败
  */
-$sql = "insert into bs_user(username,password,createtime,ip)values('$username','$rpwd','$createtime','$ip')";
+$sql = "insert into bs_user(username,password,createtime,ip,type)values('$username','$rpwd','$createtime','$ip',$usertype)";
 $result = mysqli_query($conn, $sql);
 if ($result && mysqli_affected_rows($conn)) {
 	//echo '注册成功,当前的用户为' . mysqli_insert_id($conn);
