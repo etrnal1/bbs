@@ -41,12 +41,15 @@ if (!$conn) {
 $sql = "insert into bs_user(username,password,createtime,ip)values('$username','$rpwd','$createtime','$ip')";
 $result = mysqli_query($conn, $sql);
 if ($result && mysqli_affected_rows($conn)) {
-	echo '注册成功,当前的用户为' . mysqli_insert_id($conn);
-	echo '<a href="index.htmls">首页</a>';
+	//echo '注册成功,当前的用户为' . mysqli_insert_id($conn);
+	$tips = '用户注册成功';
+	include 'tpl/success.php';
+
 } else {
 
-	echo '注册失败';
-	//echo mysqli_error($conn);
+	$tips = '用户注册成功';
+	include 'tpl/error.php';
+
 }
 
 mysqli_close($conn);
