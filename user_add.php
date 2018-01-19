@@ -42,7 +42,7 @@ $sql = "insert into bs_user(username,password,createtime,ip)values('$username','
 $result = mysqli_query($conn, $sql);
 if ($result && mysqli_affected_rows($conn)) {
 	echo '注册成功,当前的用户为' . mysqli_insert_id($conn);
-	echo '<a href="index.html">首页</a>';
+	echo '<a href="index.htmls">首页</a>';
 } else {
 
 	echo '注册失败';
