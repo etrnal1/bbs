@@ -9,6 +9,7 @@
 	<style type="text/css">
 		div {
 			background-color: orange;
+
 		}
 		.xg{
 			 border:1px solid #cc;
@@ -18,8 +19,6 @@
 			}
 
 		.two{
-			width: 100%;
-			height: 10%;
 			boder:1px solid;
 			text-align: center;
 
@@ -46,6 +45,34 @@
 			 top: 40%;
 		}
 
+
+		.white ul li{
+
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			float: left;
+}
+		.white ul li a{
+			padding: 8px 50px;
+			background: #3A4953;
+			width: 150px;
+			height: 30px;
+			font-color:red;
+			line-height: 30px;
+			text-align: center;
+
+			font-color:red;
+			display: block;
+			text-decoration: none;
+			border-right: 1px solid #000;
+		}
+		.white ul li a hover{
+			background: white;
+			color:#green;
+		}
+
+
 	</style>
 </head>
 <body>
@@ -54,19 +81,16 @@ include 'common.php';
 //展示数据，如果没有。提示添加板块
 $sql = "select id,category from bs_category where id>0";
 
-//echo $sql;
-//var_dump($_SESSION);
-/**
- * [$result 如果兔兔出现，将登陆按钮隐藏，显示用户信息]
- * @var [type]
- */
 $result = mysqli_query($conn, $sql);
 //var_dump($result);
 
 if ($result && mysqli_affected_rows($conn)) {
 	while ($row = mysqli_fetch_assoc($result)) {
 
-		echo '<div class="threee"><a href="fabiao.php?classid=' . $row['id'] . '">' . $row['category'] . '</a></div>';
+		echo '<div class="three"><a href="fabiao.php?classid=' . $row['id'] . '">' . $row['category'] . '</a>
+
+
+		</div>';
 
 	}
 
@@ -76,21 +100,11 @@ if ($result && mysqli_affected_rows($conn)) {
 }
 
 ?>
-<? include 'tpl/index.php';?>
-<div class="two">
-		<ul>
-		<!-- <?if(empty($_SESSION['uid'])){
-
-			echo '<li><a href="login.html">登录</a></li>';
-		}
-		else{
-			$_SESSION['username'];
-		echo '用户名是'.$_SESSION['username'];
-		};?> -->
-
-
+<div class="white">
+	<ul>
 		<li><a href="common.php">基本配置文件</a></li>
 		<li><a href="set.php">设置</a></li>
+
 		<li><a href="demo.php">示例</a></li>
 		<li><a href="setpwd.php">忘记密码</a></li>
 		<li><a href="list.php">用户列表</a></li>
@@ -99,7 +113,20 @@ if ($result && mysqli_affected_rows($conn)) {
 		<li><a href="register.html">注册</a></li>
 		<li><a href="logout.php">退出</a></li>
 	</ul>
-   </div>
+</div>
+<div class="two">
+	<?if(empty($_SESSION['uid'])){
+			echo '<li><a href="login.html">登录</a></li>';
+		}else{
+              if($_SESSION['usertype'] ==2){
+					echo '管理员'.$_SESSION['username'];
+
+				}else{
+				echo '普通用户'.$_SESSION['username'];
+
+			}
+		};?>
+</div>
 
 
 

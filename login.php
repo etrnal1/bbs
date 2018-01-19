@@ -42,14 +42,15 @@ if ($pwd != $db['password']) {
 //var_dump($data);
 //var_dump($data['password']);
 //exit();
-var_dump($pwd);
-var_dump($db['password']);
-var_dump($db);
+//var_dump($pwd);
+//var_dump($db['password']);
+//var_dump($db);
 if ($pwd == $db['password']) {
 	$_SESSION['uid'] = $db['uid'];
 	$_SESSION['username'] = $db['username'];
-	var_dump($_SESSION);
-	$_SESSION['usertype'] = $data['usertype'];
+
+	$_SESSION['usertype'] = $db['type'];
+	//var_dump($_SESSION);
 	$tips = '登录成功';
 	include 'tpl/success.php';
 	//header('location:index.php');
