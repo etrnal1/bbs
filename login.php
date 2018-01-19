@@ -53,11 +53,14 @@ if ($pwd == $db['password']) {
 	//var_dump($_SESSION);
 	$tips = '登录成功';
 	include 'tpl/success.php';
-	//header('location:index.php');
+
+	header('Refresh:3,Url=index.php');
+	echo '3s 后跳转';
 
 } else {
 	$tips = '登录失败';
 	include 'tpl/error.php';
+	header('Refresh:3 Url=login.php');
 	//header('location:login.php');
 }
 
