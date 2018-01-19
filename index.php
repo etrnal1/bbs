@@ -49,6 +49,7 @@
 <body>
 <?php
 include 'common.php';
+var_dump($_SESSION);
 //展示数据，如果没有。提示添加板块
 $sql = "select id,category from bs_category where id>0";
 
