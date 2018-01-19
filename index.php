@@ -21,7 +21,7 @@
 		.two{
 			boder:1px solid;
 			text-align: center;
-
+			f
 			position: absolute;
 
 
@@ -39,7 +39,7 @@
 
 		}
 		.three {
-			position: absolute;
+			 position: absolute;
 			 width: 100%;
 			 height: 20%;
 			 top: 40%;
@@ -55,7 +55,7 @@
 }
 		.white ul li a{
 			padding: 8px 50px;
-			background: #3A4953;
+			background: red;
 			width: 150px;
 			height: 30px;
 			font-color:red;
