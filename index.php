@@ -53,7 +53,11 @@ include 'common.php';
 $sql = "select id,category from bs_category where id>0";
 
 //echo $sql;
-
+var_dump($_SESSION);
+/**
+ * [$result 如果兔兔出现，将登陆按钮隐藏，显示用户信息]
+ * @var [type]
+ */
 $result = mysqli_query($conn, $sql);
 //var_dump($result);
 if ($result && mysqli_affected_rows($conn)) {
@@ -69,10 +73,17 @@ if ($result && mysqli_affected_rows($conn)) {
 }
 
 ?>
-
-	<div class="two">
+<div class="two">
 		<ul>
-		<li><a href="login.html">登录</a></li>
+		<?if(empty($_SESSION['uid'])){
+
+			echo '<li><a href="login.html">登录</a></li>';
+		}
+		else{
+			$_SESSION['username'];
+		echo '用户名是'.$_SESSION['username'];
+		};?>
+
 		<li><a href="register.html">注册</a></li>
 		<li><a href="common.php">基本配置文件</a></li>
 		<li><a href="set.php">设置</a></li>
@@ -81,6 +92,7 @@ if ($result && mysqli_affected_rows($conn)) {
 		<li><a href="list.php">用户列表</a></li>
 		<li><a href="article_list.php">文章列表</a></li>
 		<li><a href="bankuai.php">添加板块</a></li>
+		<li><a href="logout.php">退出</a></li>
 	</ul>
    </div>
    <div class="three">
