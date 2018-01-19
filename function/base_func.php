@@ -16,3 +16,22 @@ function parseValue($data) {
 	}
 
 }
+/**
+ * [parseSet 传递一个数组]
+ * @param  [type] $data [description]
+ * @return [type]       [description]
+ */
+
+function parseSet($data) {
+	foreach ($data as $key => $value) {
+		$value = parseValue($value);
+		if (is_scalar($value)) {
+			$set[] = $key . '=' . $value;
+
+		}
+
+		# code...
+	}
+	return $set;
+
+}
