@@ -22,12 +22,13 @@
 			height: 10%;
 			boder:1px solid;
 			text-align: center;
-			background-color: orange;
-			top:10%;
-			left: 20%;
+
+			position: absolute;
+
+
 
 		}
-		.two ul{
+	.two ul{
 
 
 
@@ -39,9 +40,10 @@
 
 		}
 		.three {
-
-			 width: 200px;
-			 height: 300px;
+			position: absolute;
+			 width: 100%;
+			 height: 20%;
+			 top: 40%;
 		}
 
 	</style>
@@ -53,17 +55,18 @@ include 'common.php';
 $sql = "select id,category from bs_category where id>0";
 
 //echo $sql;
-var_dump($_SESSION);
+//var_dump($_SESSION);
 /**
  * [$result 如果兔兔出现，将登陆按钮隐藏，显示用户信息]
  * @var [type]
  */
 $result = mysqli_query($conn, $sql);
 //var_dump($result);
+
 if ($result && mysqli_affected_rows($conn)) {
 	while ($row = mysqli_fetch_assoc($result)) {
 
-		echo '<div><a href="fabiao.php?classid=' . $row['id'] . '">' . $row['category'] . '</a></div>';
+		echo '<div class="threee"><a href="fabiao.php?classid=' . $row['id'] . '">' . $row['category'] . '</a></div>';
 
 	}
 
@@ -73,18 +76,19 @@ if ($result && mysqli_affected_rows($conn)) {
 }
 
 ?>
+<? include 'tpl/index.php';?>
 <div class="two">
 		<ul>
-		<?if(empty($_SESSION['uid'])){
+		<!-- <?if(empty($_SESSION['uid'])){
 
 			echo '<li><a href="login.html">登录</a></li>';
 		}
 		else{
 			$_SESSION['username'];
 		echo '用户名是'.$_SESSION['username'];
-		};?>
+		};?> -->
 
-		<li><a href="register.html">注册</a></li>
+
 		<li><a href="common.php">基本配置文件</a></li>
 		<li><a href="set.php">设置</a></li>
 		<li><a href="demo.php">示例</a></li>
@@ -92,12 +96,11 @@ if ($result && mysqli_affected_rows($conn)) {
 		<li><a href="list.php">用户列表</a></li>
 		<li><a href="article_list.php">文章列表</a></li>
 		<li><a href="bankuai.php">添加板块</a></li>
+		<li><a href="register.html">注册</a></li>
 		<li><a href="logout.php">退出</a></li>
 	</ul>
    </div>
-   <div class="three">
-   	 板块
-   </div>
+
 
 
 </body>
