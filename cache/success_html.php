@@ -155,9 +155,7 @@
 			position:absolute;
 			top:30%;
 			left:40%;
-			background:green;
-			text-align:center;
-			color:#ffffff;
+			text-align: center;
 			
 		}
 		.jump{
@@ -165,7 +163,7 @@
 			height:50px;
 			border:1px solid green;
 			position:absolute;
-			top:60%;
+			top:80%;
 			left:37%;
 			text-align:center;
 		}
@@ -178,20 +176,19 @@
 			<ul>
 				<li>首页</li>
 				<li>新帖</li>
-				<li>下载</li>
-				<li><b>插件和模板</b></li>
-				<li><b>1元商业授权</b></li>
-				<li>一键部署</li>
+				<li>论坛</li>
+				
 			</ul>
 		</div>
 		<div class="user">
-			<ul>
+			<!-- <ul>
+				去掉用户管理
 				<li><img src="<?=$webSite;?>img/image/search.jpg"></li>
 				<li><img src="<?=$webSite;?>img/image/1.jpg"></li>
 				<li><img src="<?=$webSite;?>img/image/2.jpg"></li>
 				<li><img src="<?=$webSite;?>img/image/3.jpg"></li>
 				<li><img src="<?=$webSite;?>img/image/4.jpg"></li>
-			</ul>	
+			</ul>	 -->
 
 		</div>
 	</div>
@@ -200,7 +197,7 @@
 
 	<div class="regist">
 		<div class="re_top">
-			&nbsp;<b>成功</b>
+			&nbsp;<b>出现错误</b>
 			
 			<div class="tips"><h1><?=$message;?></h1></div>
 			

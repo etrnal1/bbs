@@ -25,7 +25,7 @@ $conn = insert($conn, DB_PREFIX . 'user', $data);
 //var_dump($conn);
 
 if ($conn) {
-	success('注册成功');
+	success('注册成功', '3', 'index.php');
 } else {
 	error('注册失败');
 

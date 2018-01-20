@@ -17,7 +17,8 @@
 				<li><a href="list.php">新帖</a></li>
 				<li><a href="#">下载</li>
 				<li><a href="#"><b>插件和模板</b></a></li>
-				<li><a href="#"><b>1元商业授权</b></a></li>
+				<li><a href=""
+					<?=$webSite;?>logout.php"><b>退出</b></a></li>
 				
 				<li><a href="<?=$webSite;?>admin/">管理中心</a></li>
 			
@@ -26,23 +27,26 @@
 		<div class="user">
 			<ul>
 				<li><a href="#"><img src="<?=$webSite;?>img/image/search.jpg"></a></li>
-			   <?php if($_SESSION['uid']):?>
-				<li><a href="setting.php"><?=$_SESSION['username'];?></a></li>
-				<li><a href="setting.php">个人中心</a></li>
-				<li><a href="logout.php">退出</a></li>
-				<?php else: ?>
-				<li><a href="login.php">登录</a></li>
-				<li><a href="register.php">注册</a></li>
-				<?php endif;?>
+			  <?php if($_SESSION['uid']):?>
+				
+				<li><a href="<?=$webSite;?>setting.php">个人中心</a></li>
+			  
+			
+			  
+				
+			 <?php else: ?>
+			 	<li><a href="<?=$webSite;?>login.php">登录</a></li>
+				<li><a href="<?=$webSite;?>register.php">注册</a></li>
+			  <?php endif;?>
 			</ul>	
 
 		</div>
 	</div>
 	<section>
-		<div class="guanggao">
+		<!-- <div class="guanggao">
 			这是广告需要注释掉
 			<img src="<?=$webSite;?>img/image/gunagao.png" />
-		</div>
+		</div> -->
 		<div class="wenzi">
 			<span>今日：2</span><img src="<?=$webSite;?>img/image/wenzi.png" />
 			<span>昨日：24</span><img src="<?=$webSite;?>img/image/wenzi.png" />

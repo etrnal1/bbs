@@ -50,6 +50,7 @@ function insert($conn, $table, $data) {
 function update($conn, $table, $data, $where) {
 	$set = join(',', parseSet($data));
 	$sql = "update $table set $set where $where";
+	//echo $sql;
 	$result = mysqli_query($conn, $sql);
 	return $result;
 }
