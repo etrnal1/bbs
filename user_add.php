@@ -45,6 +45,10 @@ if ($result && mysqli_affected_rows($conn)) {
 	//echo '注册成功,当前的用户为' . mysqli_insert_id($conn);
 	$tips = '用户注册成功';
 	include 'tpl/success.php';
+	header('Refresh:3,Url=index.php');
+	echo '3s 后跳转';
+//由于只是普通页面展示，提示的样式容易定制
+	die;
 
 } else {
 

@@ -38,13 +38,13 @@
 			text-align: center;
 
 		}
-		.three {
+	/*	.three {
 			 position: absolute;
 			 width: 100%;
 			 height: 20%;
 			 top: 40%;
 		}
-
+*/
 
 		.white ul li{
 
@@ -55,7 +55,7 @@
 }
 		.white ul li a{
 			padding: 8px 50px;
-			background: red;
+			background: purple;
 			width: 150px;
 			height: 30px;
 			font-color:red;
