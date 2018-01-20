@@ -1,0 +1,321 @@
+body{
+		background:#F1F5F8;
+		
+		}
+		section{
+			height:1400px;
+		}
+		section .wenzi{
+			width:1200px;
+			height:25px;
+			background:#F1F5F8;
+		}
+		section .wenzi span{
+			width:105px;
+			height:20px;
+			text-align:center;
+			line-height:20px;
+			font-size:12px;
+			display:block;
+			float:left;
+		}
+		section .wenzi img{
+			margin-left:2px;
+			height:18px;
+			margin-top:2px;
+			float:left;
+		}
+		
+		section .wenzi a{
+			text-decoration:none;
+		}
+			section .wenzi a:hover{
+			text-decoration:underline;
+		}
+		section .redian{
+			height:290px;
+			width:1200px;
+			background:#fff;
+			border-bottom:double 1px #ccc;
+		}
+		section .youqing{
+			height:109px;
+			width:1200px;
+			background:#fff;
+			}
+	
+		section .center-a{
+			width:1200px;
+			height:90px;
+		}
+		section .biaoti{
+			height:800px;
+		}
+		section .biaoti a:link{
+			text-decoration:none;
+			color:#105CB6;
+			font-size:14px;
+			
+		}
+		section .biaoti a:hover{
+			text-decoration:underline;
+		}
+		section .biaoti .one img{
+			float:left;
+			margin-top:15px;
+			
+		}
+		section .biaoti .one div{
+			float:left;
+		}
+		section .biaoti .one .aaa:link{
+			color:#333333;
+			text-decoration:none;
+			font-size:13px;
+			font-weight:bold;
+
+			
+		}
+		section .biaoti div{
+			margin-left:10px;
+		}
+		section .biaoti div p{
+			font-size:12px;
+		}
+		section .biaoti .one .aaa:hover{
+			text-decoration:underline;
+
+			
+		}
+		section .biaoti .biaoti-right p{
+			float:right;
+			
+		}
+		section .biaoti .biaoti-right a{
+			float:right;
+			font-size:14px;
+			
+		}
+		section .redian .top{
+			height:34px;
+			width:1200px;
+			border-bottom:1px solid #ccc;
+		}
+		section .redian .top span{
+			height:29px;
+			width:70px;
+			margin-top:5px;
+			margin-left:5px;
+			text-align:center;
+			font-size:12px;
+			line-height:34px;
+			display:block;
+			float:left;
+			border:1px red solid;
+			border-bottom:none;
+			background:#fff;
+			color:red;
+		}
+		section .redian .top span a:link{
+			color:red;
+			text-decoration:none;
+			font-weight:bold;
+		}
+		section .redian .top span a:hover{
+
+			text-decoration:underline;
+		}
+		section .redian .center{
+			width:600px;
+			height:250px;
+			float:left;
+			margin-top:2px;
+		}
+		
+		section .redian .center ul{
+			margin-top:10px;
+			margin-left:12px;
+			float:left;
+		}
+		section .redian .center ul li{
+			list-style:none;
+		}
+		
+		section .redian .center ul li .fangkuai:link{
+			color:#333333;
+			font-size:14px;
+			text-decoration:none;
+		}
+		section .redian .center ul li .fangkuai:hover{
+			text-decoration:underline;
+		}
+		section .redian .center ul li .red:link{
+			font-size:14px;
+			text-decoration:none;
+			color:red;
+			padding-left:4px;
+		}
+		section .redian .center ul li .red:hover{
+			text-decoration:underline #333;
+				
+		}
+		section .redian .center ul li .blue:link{
+			font-size:14px;
+			text-decoration:none;
+			color:#0070C0;
+			padding-left:4px;
+		}
+		section .redian .center ul li .blue:hover{
+			text-decoration:underline #333;
+				
+		}
+		section .redian .center ul li .green:link{
+			font-size:14px;
+			text-decoration:none;
+			color:#00B050;
+			padding-left:4px;
+		}
+		section .redian .center ul li .green:hover{
+			text-decoration:underline #333;
+				
+		}
+		section .redian .center ul li .lan:link{
+			font-size:14px;
+			text-decoration:none;
+			color:#00B0F0;
+			padding-left:4px;
+		}
+		section .redian .center ul li .lan:hover{
+			text-decoration:underline #333;
+				
+		}
+		section .redian .center ul li .qianlan:link{
+			font-size:14px;
+			text-decoration:none;
+			color:#8DB3E2;
+			padding-left:4px;
+		}
+		section .redian .center ul li .qianlan:hover{
+			text-decoration:underline #333;
+				
+		}
+			section .redian .center ul li .zise:link{
+			font-size:14px;
+			text-decoration:none;
+			color:#743CA0;
+			padding-left:4px;
+		}
+		section .redian .center ul li .zise:hover{
+			text-decoration:underline #333;
+				
+		}
+		section .redian .center ul li .huise:link{
+			font-size:14px;
+			text-decoration:none;
+			color:#E36C09;
+			padding-left:4px;
+		}
+		section .redian .center ul li .huise:hover{
+			text-decoration:underline #333;
+				
+		}
+		section .youqing{
+			height:100px;
+		}
+		section .youqing .biao1{
+			width:1200px;
+			height:30px;
+			border-bottom:1px solid #CDD1D3;
+			padding-left:4px;
+			padding-top:2px;
+			margin-top:7px;
+		}
+		section .youqing .xiangguan{
+		width:1200px;
+		height:82px;
+		border-bottom:1px solid #CDD1D3;
+		margin-top:5px;
+		}
+		section .youqing .xiangguan ul {
+			float:left;
+			margin-top:15px;
+		}
+		section .youqing .xiangguan ul li {
+			float:left;
+			list-style-type:none;
+			margin-top:3px;
+			margin-left:15px;
+		}
+
+		section .youqing .xiangguan ul li .tz:link{
+			color:#333333;
+			font-size:12px;
+			text-decoration:none;
+			float:left;
+		}
+		section .youqing .xiangguan ul li .tz:hover{
+			text-decoration:underline;
+		}
+
+
+	body{
+			margin:0px;
+			font-family: 微软雅黑;
+		}
+		.head{
+			width:100%;
+			height: 110px;
+			background-color:#0078D7;
+		}
+		.logo{
+			width: 140px;
+			height: 66px;
+			background-image: url("images/logo.jpg");
+			background-repeat: no-repeat;
+			margin-left: 110px;
+			margin-right: 20px;
+			margin-top: 26px;
+			float: left;
+		}
+		.menu{
+			width: 570px;
+			height: 63px;
+			margin-top: 20px;
+			float: left;
+			color: #F1FFFF;
+		}
+		.menu ul li{
+			float: left;
+			list-style: none;
+			margin-right: 30px;
+			padding-left: -35px;
+			padding-top: 10px;
+		}
+		.menu ul li a{
+			color:white;
+			text-decoration:none;
+		}
+		.user{
+			width: 400px;
+			height: 70px;
+			margin-top: 30px;
+			float: right;
+		}
+		.user ul li{
+			width: 50px;
+			height: 36px;
+			margin-right: 20px;
+			list-style: none;
+			float: left;
+			font-size: 14px;
+			color: white;
+		}
+		.user ul li:first-child{
+			margin-top: -10px;
+		}
+		.user ul li a{
+			color:white;
+			text-decoration:none;
+		}
+
+

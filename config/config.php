@@ -1,14 +1,17 @@
 <?php
-/**
- * å®šåˆ¶ä¸€äº›æ•°æ®åº“çš„å‚æ•°
- * è¿”å›ä¸€ä¸ªsh
- */
-return [
-	'DB_HOST' => '127.0.0.1',
-	'DB_USER' => 'root',
-	'DB_PWD' => '',
-	'DB_NAME' => 'bs',
-	'DB_CHARSET' => 'utf8',
-];
+//Ê±Çø
+define('TIMEZONE', 'PRC');
+//¶¨ÒåÍøÕ¾µÄÓò ÃûºÍÎÄ¼ş¼Ğ
+define('WEB_SITE', 'http://www.tp5.com/');
+//ÊÇ·ñ¿ªÆôµ÷ÊÔÄ£Ê½
+define('DEBUG', 0);
+//ÍøÕ¾ÊÇ·ñ¹Ø±Õ
+define('IS_CLOSE', false);
 
-?>
+define('PATH', str_replace('\\', '/', substr(dirname(__FILE__), 0, -6)));
+
+//Æ¤·ô
+define('TPL_PATH', PATH . 'views/');
+define('TPL_CACHE', PATH . 'cache/');
+
+//»ı·Ö·ÅºóÌ¨£ºÃ¿ÌìµÇÂ½¡¢Ã¿´ÎÇ©µ½¡¢Ã¿´Î·¢Ìù ¡¢Ã¿´Î»ØÌù ¡¢Ã¿´ÎÉ¾Ìù¿Û¶àÉÙ

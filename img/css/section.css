@@ -1,0 +1,14 @@
+section{
+			width:1200px;
+			height:1324px;
+			margin:0px auto;
+			//background:pink;
+		}
+
+		section .guanggao{
+			height:95px;
+			width:1200px;
+			background:#84DE37;
+			margin-top:11px;
+
+		}

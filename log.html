@@ -1,0 +1,23 @@
+setInterval(function(){
+	var i  =document.getElementByid('sec');
+	var num = parseInt(i.innerHTML);
+	num --;
+	i.innerHTML = num;
+},1000);
+
+config.php  能够定义最基本的一些常量
+conmmon.php 定义网站的基本路径。负责数据库的连接，
+
+根据自己自定义的函数，及时传递参数，然后参数错误，进行判断
+注册页面目前有密码泄露，需要进行注释
+
+
+登录界面的逻辑
+
+ 检查用户名是否为空，如果为空，则提示输入密码。检查用户的密码长度是否小于7.如果小于6密码不正确
+ 准备接收用户的数据，去sql数据库查询，然后提示数据,
+xiaobai 
+w1234,
+要定义好web 变量，当验证码不输出的时候，记得找调试
+把调试信息给调出来
+看是否错误

@@ -1,3 +1,4 @@
 <?php
-include 'config/config.php';
-include 'function/mysql_func.php';
+include 'common/common.php';
+
+display('login.html',compact('webSite'));
