@@ -1,34 +1,20 @@
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>管理中心，添加版块</title>
-		
-		
-		</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理中心</title>
+</head>
+<body>
+	<form action="add_form.php">
+		<select name="pid" id="">
+			<option value="0">顶级分离</option>
+			<br>
+
+		</select>
+		<input type="text" name="form_name">
+		<input type="submit" value="添加">
+
+	</form>
 	
-		<form action="add_fourm.php" method="post">
-			父级分类：<select name="pid">
-				<option value="0">无</option>
-				{foreach $data as $val}
-				<option value="{$val['fid']}">{$val['fourm_name']}</option>
-				{/foreach}
-			</select>
-			
-			<br />
-			
-			<input type="text" name="fourm_name" /><br />
-			
-			<input type="submit" value="添加" />
-		
-		
-		</form>
-		
-		
-	
-	
-	</body>
-	
-	
-	
+</body>
 </html>

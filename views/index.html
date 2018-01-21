@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
@@ -15,38 +14,32 @@
 			<ul>
 				<li><a href="index.php">首页</a></li>
 				<li><a href="list.php">新帖</a></li>
-				<li><a href="#">下载</li>
-				<li><a href="#"><b>插件和模板</b></a></li>
-				<li><a href=""
-					{$webSite}logout.php"><b>退出</b></a></li>
+				{if !empty($_SESSION['type']) }
+				<li><a href="{$webSite}admin/index.php">管理员中心</li>
+				{/if}
 				
-				<li><a href="{$webSite}admin/">管理中心</a></li>
-			
+				
 			</ul>
 		</div>
 		<div class="user">
 			<ul>
-				<li><a href="#"><img src="{$webSite}img/image/search.jpg"></a></li>
-			  {if $_SESSION['uid']}
-				
-				<li><a href="{$webSite}setting.php">个人中心</a></li>
-			  
-			
-			  
-				
-			 {else}
-			 	<li><a href="{$webSite}login.php">登录</a></li>
-				<li><a href="{$webSite}register.php">注册</a></li>
-			  {/if}
+				{if empty($_SESSION['uid'])}
+				<li><a href="login.php">登录</a></li>
+				<li><a href="register.php">注册</a></li>
+		 	 	{else}
+		 	 	  <li>{$_SESSION['username']}</li>
+		 	 	  <li><a href="{$webSite}admin/index.php">管理员中心</a></li>
+		 	 	  <li><a href="{$webSite}logout.php">退出</a></li>
+		 	 	  {/if}
+
 			</ul>	
 
 		</div>
 	</div>
 	<section>
-		<!-- <div class="guanggao">
-			这是广告需要注释掉
-			<img src="{$webSite}img/image/gunagao.png" />
-		</div> -->
+		<div class="guanggao">
+			<!-- 广告<img src="{$webSite}img/image/gunagao.png" /> -->
+		</div>
 		<div class="wenzi">
 			<span>今日：2</span><img src="{$webSite}img/image/wenzi.png" />
 			<span>昨日：24</span><img src="{$webSite}img/image/wenzi.png" />
@@ -66,33 +59,104 @@
 						<a class="fangkuai" href="#">[程序发布]</a>
 						<a href="#" class="red">PW移动社区9.0正式推出，开放公测（2015.11.19更新）</a>
 					</li>
-					
+				<!-- 	<li>
+						<a class="fangkuai" href="#">[程序发布]</a>
+						<a href="#" class="red">PW移动社区9.0正式推出，开放公测（2015.11.19更新）</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[8.7移动版]</a>
+						<a href="#" class="red">PW移动社区8.7（GBK&UTF8）版本开启公测（11月13日更新）！</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[phpwind 黑板报]</a>
+						<a class="blue" href="#" >获取phpwind官方论坛邀请码！</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[phpwind 黑板报]</a>
+						<a class="green" href="#" >phpwind免费商业授权上线啦！~</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[程序发布]</a>
+						<a class="fangkuai" href="#" >phpwind 9.X xss漏洞修复方案(20150730)</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[phpwind 黑板报]</a>
+						<a href="#" class="red">phpwind插件模板正式入驻阿里云云市场！</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[安装使用]</a>
+						<a class="fangkuai" href="#">phpwind移动ios版剧透第一波</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[安装使用]</a>
+						<a class="lan" href="#"> pw 9.x常见问题及处理方案汇总帖（5月6日更新）</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[程序发布]</a>
+						<a class="lan" href="#"> phpwind v9.0.1 utf8更新（2014年12月23号）</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[phpwind 黑板报]</a>
+						<a href="#" class="red">phpwind插件模板正式入驻阿里云云市场！</a>
+					</li> -->
 				</ul>
 			</div>
-			<div class="center">
+			<!-- <div class="center">
 				<ul>
 					<li>
 						<a class="fangkuai" href="#">[模板/插件] </a>
 						<a href="#" class="qianlan">虚拟信息发布插件上线啦~</a>
 					</li>
 					<li>
+						<a class="fangkuai" href="#">[模板/插件]</a>
+						<a href="#" class="zise">phpwind手机版 8.X html5触屏版 windtouch5.for小魔客</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[模板/插件]</a>
+						<a class="huise" href="#" > phpwind手机验证服务正式上线[支持9.x、8x]~</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[新品上架] </a>
+						<a class="green" href="#" >phpwind9.x整站+门户模板，仿小城东港风格</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[程序发布]</a>
+						<a class="fangkuai" href="#" >phpwind 9.X xss漏洞修复方案(20150730)</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[1元专区]</a>
+						<a href="#" class="red">模板插件之1元专区</a>
+					</li>
+					<li>
 						<a class="fangkuai" href="#">[安装使用]</a>
 						<a class="fangkuai" href="#">phpwind移动ios版剧透第一波</a>
 					</li>
-					</ul>
-			</div>
+					<li>
+						<a class="fangkuai" href="#">[安装使用]</a>
+						<a class="red" href="#"> pw 9.x常见问题及处理方案汇总帖（5月6日更新）</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[新品上架]</a>
+						<a class="red" href="#">phpwind9.x整站模板ThinkW3-手机端自适应</a>
+					</li>
+					<li>
+						<a class="fangkuai" href="#">[官方推荐]</a>
+						<a href="#" class="green">phpwind8.7蓝色GBK模板_论坛+门户【林克设计】</a>
+					</li>
+				</ul>
+			</div> -->
 		</div>
-		<div class="center-a">
+		<!-- 阿里云广告区<div class="center-a">
 			<a href="#">
 				<img src="{$webSite}img/image/yun.png" />
 			</a>	
-		</div>
+		</div> -->
 		<div class="biaoti">
-			
+			<!-- {foreach  $parentFourm as $key => $value} -->
 			<table width="1200" cellpadding="0" cellspacing="0">
 				<tr height="36" style="background-color:#F7F7F7;">
 					<td colspan="2">
-					<a href="#"></a>
+					<a href="#">{$value['fourm_name']}</a>
 					<td>
 					<div class="biaoti-right">
 					   <a href="#">于志腾</a>
@@ -101,21 +165,21 @@
 					</td>
 				</tr>
 				<tr style="background-color:#fff;" height="76" class="one">
-					
+					<!-- {foreach $value['child'] as $val} -->
 					<td>
-						<img src="{$webSite}img/image/tb.png" />
+						<!-- 淘宝广告<img src="{$webSite}img/image/tb.png" /> -->
 						<div>
-							<a href="fourm.php?fid={$val['fid']}"></a>
+							<a href="fourm.php?fid={$val['fid']}"><!-- {$val['fourm_name']} --></a>
 							
 							<p>主题：574，帖子：157834</p>
 							<p>最后回复：05-24 20:11</p>
 						</div>
 					</td>
-					
+					<!-- {/foreach} -->
 
 				</tr>
 			</table>
-			
+			<!-- {/foreach} -->
 			
 		</div>
 		<div class="youqing">
@@ -123,36 +187,13 @@
 			<div class="xiangguan">
 				<ul>
 					<li><a href="a" class="tz">阿里云云栖社区</a></li>
-					<li><a href="a" class="tz">阿里云官方论坛</a></li>
-					<li><a href="a" class="tz">PHP100中文网</a></li>
-					<li><a href="a" class="tz">青州论坛</a></li>
-					<li><a href="a" class="tz">phpwind站长网</a></li>
-					<li><a href="a" class="tz">中钓论坛</a></li>
-					<li><a href="a" class="tz">昆山论坛</a></li>
-					<li><a href="a" class="tz">15路驿站</a></li>
-					<li><a href="a" class="tz">重庆社区</a></li>
-					<li><a href="a" class="tz">重庆社区</a></li>
-					<li><a href="a" class="tz">闪电软件论坛</a></li>
-					<li><a href="a" class="tz">厦门小鱼</a></li>
-					<li><a href="a" class="tz">CNZZ数据专家</a></li>
-					<li><a href="a" class="tz">中国站长论坛</a></li>
-					<li><a href="a" class="tz">上虞论坛</a></li>
-					<li><a href="a" class="tz">服务器频道</a></li>
-					<li><a href="a" class="tz">爱威海</a></li>
-					<li><a href="a" class="tz">华夏联盟论坛</a></li>
-					<li><a href="a" class="tz">TT86综合社区</a></li>
-					<li><a href="a" class="tz">中国站长之家</a></li>
-					<li><a href="a" class="tz">搜狐博客开放平台</a></li>
-					<li><a href="a" class="tz">齐博CMS</a></li>
-					<li><a href="a" class="tz">中国营口论坛</a></li>
-					<li><a href="a" class="tz">湖州南太湖</a></li>
-					<li><a href="a" class="tz">猴岛游戏论坛</a></li>
-					<li><a href="a" class="tz">华彩联盟论坛</a></li>
+					
+					
+					
 				</ul>
 			</div>
 		</div>
 	</section>
 	</body>
-
 
 </html>

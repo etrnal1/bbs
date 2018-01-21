@@ -57,6 +57,7 @@ function update($conn, $table, $data, $where) {
 
 function select($conn, $table, $fields, $where) {
 	$sql = "select $fields from $table where $where";
+	echo $sql;
 	$result = mysqli_query($conn, $sql);
 	if ($result && mysqli_affected_rows($conn)) {
 		while ($row = mysqli_fetch_assoc($result)) {
