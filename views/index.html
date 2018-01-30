@@ -152,11 +152,11 @@
 			</a>	
 		</div> -->
 		<div class="biaoti">
-			<!-- {foreach  $parentFourm as $key => $value} -->
+		    {foreach $fBan as $key=>$value}
 			<table width="1200" cellpadding="0" cellspacing="0">
 				<tr height="36" style="background-color:#F7F7F7;">
 					<td colspan="2">
-					<a href="#">{$value['fourm_name']}</a>
+					<a href="#">{$value['category']}</a>
 					<td>
 					<div class="biaoti-right">
 					   <a href="#">于志腾</a>
@@ -165,21 +165,21 @@
 					</td>
 				</tr>
 				<tr style="background-color:#fff;" height="76" class="one">
-					<!-- {foreach $value['child'] as $val} -->
+					{foreach $value['child'] as $val}
 					<td>
-						<!-- 淘宝广告<img src="{$webSite}img/image/tb.png" /> -->
+						<img src="{$webSite}img/image/tb.png" />
 						<div>
-							<a href="fourm.php?fid={$val['fid']}"><!-- {$val['fourm_name']} --></a>
+							<a href="fourm.php?fid={$val['fid']}">{$val['category']}</a>
 							
 							<p>主题：574，帖子：157834</p>
 							<p>最后回复：05-24 20:11</p>
 						</div>
 					</td>
-					<!-- {/foreach} -->
+					{/foreach}
 
 				</tr>
 			</table>
-			<!-- {/foreach} -->
+			{/foreach}
 			
 		</div>
 		<div class="youqing">

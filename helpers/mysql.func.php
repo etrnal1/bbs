@@ -36,7 +36,7 @@ function insert($conn, $table, $data) {
 	$values = implode(',', parseValue(array_values($data)));
 	//insert into bbs(username,password) valuse('liwenkai')
 	$sql = "insert into $table($fields) values($values)";
-
+	//echo $sql;
 	$result = mysqli_query($conn, $sql);
 
 	if ($result) {
@@ -49,15 +49,17 @@ function insert($conn, $table, $data) {
 
 function update($conn, $table, $data, $where) {
 	$set = join(',', parseSet($data));
+	//var_dump($set);
 	$sql = "update $table set $set where $where";
 	//echo $sql;
+	//exit();
 	$result = mysqli_query($conn, $sql);
 	return $result;
 }
 
 function select($conn, $table, $fields, $where) {
 	$sql = "select $fields from $table where $where";
-	echo $sql;
+	//echo $sql;
 	$result = mysqli_query($conn, $sql);
 	if ($result && mysqli_affected_rows($conn)) {
 		while ($row = mysqli_fetch_assoc($result)) {

@@ -1,13 +1,12 @@
 <?php
+// /
+//  *
+//  * 板块表有默认的id 有父id .父id默认为0 即为大板块
+//  * 板块名字，板块创建的时间
+//  */
 include '../common/common.php';
 
-var_dump($_POST);
-/**
- *
- * 板块表有默认的id 有父id .父id默认为0 即为大板块
- * 板块名字，板块创建的时间
- */
-//首先得到pid
+//首先得到pid  得到大板块的id
 $data['pid'] = empty($_POST['pid']) ? 0 : (int) ($_POST['pid']);
 //得到板块名字
 $data['category'] = trim($_POST['form_name']);
@@ -15,8 +14,8 @@ $data['createtime'] = time();
 //var_dump($data);
 //exit();
 //进行插入数据库操作
-$conn = insert($conn, DB_PREFIX . 'category', $data);
-if ($conn) {
+$ds = insert($conn, DB_PREFIX . 'category', $data);
+if ($ds) {
 	success('添加板块成功');
 
 }
