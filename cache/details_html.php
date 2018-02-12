@@ -12,6 +12,8 @@
 	  没有数据
 	<?php else: ?>
 		<?php foreach($data as $val):?>
+
+          22
 		
      <div >  
      	 <div>

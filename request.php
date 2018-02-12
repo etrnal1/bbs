@@ -1,4 +1,10 @@
 <?php
+/**
+ * 这是发帖页面的逻辑
+ * 将用户的id ,发的内容，fid,content 都传递过来
+ * 进行一一的传递;
+ * 将父id 传递过去，确定是哪个版块下面的帖子
+ */
 include 'common/common.php';
 if (empty($_SESSION['uid'])) {
 	error('用户没有登录', 3, 'index.php');
@@ -23,9 +29,12 @@ $data['uid'] = $_SESSION['uid'];
 $insert = insert($conn, DB_PREFIX . 'detail', $data);
 
 // var_dump($insert);
+//exit();
+
+// var_dump($insert);
 // exit();
 if ($insert = insert($conn, DB_PREFIX . 'detail', $data)) {
-	success('发帖成功', 3, 'fourm.php?fid=' . $fid);
+	success('发帖成功', 3, 'fourm.php?fid=' . $data['fid']);
 } else {
 	error('发帖失败');
 }
